@@ -1,0 +1,25 @@
+.app-header {
+    height: 25%;
+    width: 100;
+    background-color: darkgreen;   
+    padding-top: 60px; 
+}
+
+.app-header-title {
+    display: block;
+    font-size: 80px;
+    text-align: center;
+}
+
+.header-button {
+    height: 40px;
+}
+
+.header-loggedIn-buttons {
+    margin-left: 43%;
+    margin-top: 90px;
+}
+
+.header-loggedOut-buttons {
+    margin-left: 70%;
+}

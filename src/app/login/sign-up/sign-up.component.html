@@ -1,0 +1,20 @@
+<form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+    <mat-form-field>
+        <mat-label for="name">Seu nome:</mat-label>
+        <input matInput type="text" id="name" formControlName="name">
+    </mat-form-field>
+
+    
+    <mat-form-field>
+        <mat-label for="email">E-mail:</mat-label>
+        <input matInput type="email" id="email" formControlName="email">
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label for="password">Senha:</mat-label>
+        <input matInput type="password" id="password" formControlName="password">
+    </mat-form-field>
+
+    <button type="submit">Entrar</button>
+    <p>Já possui uma conta? <a href="signin">Faça login!</a></p>
+</form>

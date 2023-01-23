@@ -1,0 +1,43 @@
+<div>
+    <h1>Endereço de entrega</h1>
+    
+    <div *ngIf="defaultAddress != null">
+        <h1>Endereço padrão:</h1>
+        <p>{{defaultAddress.street}}, {{defaultAddress.number}}</p>
+        <p>{{defaultAddress.district}}</p>
+        <p>{{defaultAddress.city}}</p>
+        <p>{{defaultAddress.state}}</p>
+        <p>{{defaultAddress.country}}</p>
+    </div>
+
+    <h1>Adicionar novo endereço:</h1>
+    <form [formGroup]="addressForm">
+        <label for="postalCode">CEP: </label>
+        <input id="postalCode" type="text" formControlName="postalCode">
+        
+        <label for="street">Rua: </label>
+        <input id="street" type="text" formControlName="street">
+    
+        <label for="number">Número: </label>
+        <input id="number" type="text" formControlName="number">
+    
+        <label for="district">Bairro: </label>
+        <input id="district" type="text" formControlName="district">
+    
+        <label for="city">Cidade: </label>
+        <input id="city" type="text" formControlName="city">
+    
+        <label for="state">Estado: </label>
+        <input id="state" type="text" formControlName="state">
+    
+        <label for="country">País: </label>
+        <input id="country" type="text" formControlName="country">
+
+        <label for="setAsDefaultAddress">Salvar como endereço padrão </label>
+        <input id="setAsDefaultAddress" type="checkbox" value="true" formControlName="setAsDefaultAddress">
+
+        <button type="submit" (click)="onSubmit()">Adicionar</button>
+    </form>
+</div>
+
+

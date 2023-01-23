@@ -1,0 +1,19 @@
+<div class="product-container">
+    <img
+    [src]="product.image"
+    class="product-image">
+
+    <div class="product-info">
+        <p>{{product.title}}</p>
+        <p>{{product.description}}</p>
+    </div>
+
+    <form [formGroup]="cartItemForm" class="quantity">
+        <label for="select-quantity">Informe a quantidade:</label>
+        <select id="select-quantity" formControlName="quantity">
+            <option *ngFor="let number of productStockNumbers">{{number}}</option>
+        </select>
+    </form>
+
+    <button type="button" class="add-button" (click)="addToCart()">Adicionar ao carrinho</button>
+</div>

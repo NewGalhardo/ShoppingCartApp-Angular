@@ -1,0 +1,36 @@
+<form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+    <mat-form-field>
+        <mat-label for="image">Imagem do produto:</mat-label>
+        <input matInput type="text" id="image" formControlName="image">
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label for="title">Título do produto:</mat-label>
+        <input matInput type="text" id="title" formControlName="title">
+    </mat-form-field>
+
+    
+    <mat-form-field>
+        <mat-label for="description">Descrição:</mat-label>
+        <input matInput type="text" id="description" formControlName="description"> 
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label for="section">Seção:</mat-label>
+        <input matInput type="text" id="section" formControlName="section"> 
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label for="price">Preço unitário:</mat-label>
+        <input matInput type="number" id="price" formControlName="price"> 
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label for="inStock">Quantidade em estoque:</mat-label>
+        <input matInput type="number" id="inStock" formControlName="inStock">
+    </mat-form-field>
+
+    <button type="submit">Cadastrar</button>
+</form>
+
+

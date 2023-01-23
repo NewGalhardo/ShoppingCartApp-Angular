@@ -1,0 +1,18 @@
+<div>
+    <form [formGroup]="freightForm">
+        <label for="postalCode">Informe seu CEP:</label>
+        <input type="number" id="postalCode" formControlName="postalCode">
+
+        <button type="button" (click)="calculateFreight()">Calcular frete</button>
+    
+        <div *ngIf="deliveryMethod != null">            
+            <input type="radio" [id]="deliveryMethod.method" formControlName="method" [value]="deliveryMethod">
+                <label [for]="deliveryMethod.method">
+                    <p>{{deliveryMethod.method}}</p>
+                    <p>Prazo de entrega: {{deliveryMethod.deliveryTimeMin}} a {{deliveryMethod.deliveryTimeMax}} dias úteis</p>
+                    <p>Valor do frete: {{deliveryMethod.freightCost}}</p>   
+                </label>                         
+            <button type="submit" (click)="onSubmit()">Continuar</button>   
+        </div>
+    </form>    
+</div>

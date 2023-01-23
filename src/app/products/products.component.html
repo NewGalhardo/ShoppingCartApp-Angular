@@ -1,0 +1,28 @@
+<!-- <div class="products-container">    
+    <div class="card-body" *ngFor="let product of products" [routerLink]="product._id">
+        <div class="product-image-container">
+            <img
+            [src]="product.image"
+            class="product-image">
+        </div>
+        <h1>{{product.title}}</h1>
+        <p>{{product.description}}</p>
+        <p>R${{product.price}}</p>
+        <p>Quantidade em estoque: {{product.inStock}}</p>
+    </div>    
+</div> -->
+
+
+<div class="products-container">
+    <mat-card *ngFor="let product of products" [routerLink]="product._id">
+        
+        <img 
+        mat-card-image
+        [src]="product.image">
+
+        <mat-card-content><h1>{{product.title}}</h1></mat-card-content>
+        <mat-card-content>{{product.description}}</mat-card-content>        
+        <mat-card-content>R${{product.price}}</mat-card-content>
+    </mat-card>
+</div>
+

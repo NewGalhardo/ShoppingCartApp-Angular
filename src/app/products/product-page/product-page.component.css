@@ -1,0 +1,37 @@
+.product-container {
+    position: relative;
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+    height: 100%;
+}
+
+.product-image {
+    width: 30%;
+    height: 30%;
+}
+
+.product-info {
+    position: absolute;
+    left: 30%;
+    top: 5%;
+    width: 70%;
+    font-size: 50px;
+}
+
+.quantity {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    height: 100px;
+    width: 80px;
+}
+
+.add-button {
+    position: absolute;
+    top: 20%;
+    left: 60%;
+    height: 100px;
+    width: 80px;
+    background-color: yellow;
+}

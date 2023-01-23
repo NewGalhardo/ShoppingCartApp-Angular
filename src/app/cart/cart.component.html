@@ -1,0 +1,26 @@
+<div class="cart-container" *ngIf="cartItems.length > 0">
+    <div class="cart-item" *ngFor="let cartItem of cartItems">
+        <h1>{{cartItem.productTitle}}</h1>
+        <p>{{cartItem.totalPrice}}</p>
+        <button type="button" (click)="removeFromCart(cartItem._id)">Remover item</button>
+    </div>
+
+    <h1>Preço total: {{totalPrice}}</h1>
+
+    <app-freight-calculator *ngIf="!freightCompleted" [cartId]="cartId"></app-freight-calculator>
+
+    <app-address-selector *ngIf="freightCompleted && !addressCompleted" [cartId]="cartId"></app-address-selector>
+
+    <app-payment-section *ngIf="freightCompleted && addressCompleted && !paymentCompleted" [cartId]="cartId" [totalPrice]="totalPrice"></app-payment-section>
+
+    <button type="button" *ngIf="freightCompleted && addressCompleted && paymentCompleted" (click)="purchase()">Finalizar pedido</button>
+</div>
+
+<div class="purchase-success" *ngIf="purchaseCompleted">
+    <h1>Compra realizada com sucesso!</h1>
+    <button type="button" (click)="seeMore()">Ver mais produtos</button>
+</div>
+
+<div class="empty-cart" *ngIf="!purchaseCompleted && cartItems.length === 0">
+    <h1>Seu carrinho está vazio!</h1>
+</div>
